@@ -12,7 +12,7 @@ For Mac:
 7. Open your browser and go to http://localhost:8000/ai-form
 
 ## Screenshot 
-screenshot.png
+[Working demo](screenshot.png)
 
 ## Reflection Questions 
 1. How did the AI output change when you modified the tone or role in your prompt?
