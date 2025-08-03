@@ -16,11 +16,21 @@ class AIController extends Controller
             'prompt' => 'required|string|min:5|max:255'
         ]);
 
+        //Get user input
+        $userPrompt = $request->input('prompt');
+
+        //Build full prompt 
+         $fullPrompt = "
+            You are a professional tech blogger.
+            Write a blog post titled: \"{$userPrompt}\".
+            The post should be at least 500 words, written in a conversational tone, and formatted in markdown.
+            ";
+
         try {
-            $response = $aiService->generateText($request->input('prompt'));
+            $response = $aiService->generateText($fullPrompt);
             return view('ai_form', ['output' => $response]);
         } catch (\Exception $e) {
-            return back()->withErros(['error' => 'AI request failed: ' . 
+            return back()->withErrors(['error' => 'AI request failed: ' . 
             $e->getMessage()]);
         }
     }
