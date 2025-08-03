@@ -21,9 +21,9 @@ class AIController extends Controller
 
         //Build full prompt 
          $fullPrompt = "
-            You are a professional tech blogger.
+            You are a solo traveler.
             Write a blog post titled: \"{$userPrompt}\".
-            The post should be at least 500 words, written in a conversational tone, and formatted in markdown.
+            The post should be at least 500 words, written in a funny tone, and formatted in markdown.
             ";
 
         try {

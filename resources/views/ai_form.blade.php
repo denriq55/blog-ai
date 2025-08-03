@@ -14,9 +14,12 @@
     @enderror
 
     @isset($output)
-        <div class="mt-6 p-4 border bg-gray-50">
+        <div class="mt-6 p-4 border bg-gray-50 max-w-3xl mx-auto">
             <h2 class="text-xl font-semibold">AI Response:</h2>
-            <pre class="mt-2 whitespace-pre-wrap">{{ $output }}</pre>
+            <pre class="mt-2 whitespace-pre-wrap max-w-prose mx-auto">{{ $output }}</pre>
+            <div class="bg-red-500 p-10">
+  Test box
+</div>
         </div>
     @endisset
 </div>
